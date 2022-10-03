@@ -1,0 +1,19 @@
+/* .sidebar_container{
+    flex: 0.5;
+    height: calc(100vh - 50px);
+    background-color: teal;
+    background-color: rgb(251, 251, 255);
+    top: 50px;
+    border-right: 1px solid grey;
+}
+.sidebar_menu{
+    margin-bottom: 10px;
+}
+.sidebar_listitem{
+    cursor: pointer;
+    color: teal;
+}
+.sidebar_listitem:hover{
+    background-color: rgb(240, 240, 255);
+
+} */

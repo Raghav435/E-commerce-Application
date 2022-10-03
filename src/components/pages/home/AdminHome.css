@@ -1,0 +1,15 @@
+.hero-img2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 280px;
+}
+
+@media screen and (max-width: "740px") {
+    .hero-img2{
+        display: block;
+        width: 300px;
+        margin-right: 5rem;
+    }
+    
+}

@@ -1,0 +1,90 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+.flex {
+  display: flex;
+  margin-left: 20%;
+}
+.product_size {
+  color: teal;
+ margin-right: 43%;
+} 
+.productTitile{
+  font-size: 22px;
+  font-weight: bolder;
+}
+.product_topbar{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.productAddButton{
+  width: 70px;
+  border: none;
+  background-color: teal;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+@media ( min-width: 300px) and (max-width: 600px) {
+  .grid {
+    display: block;
+  }
+  .flex {
+    display: block;
+    text-align: center;
+    margin-right: 15%;
+  }
+  .product_size {
+    text-align: center;
+    margin-left: 42%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+  .flex {
+    display: block;
+    text-align: center;
+    margin-right: 12%;
+  }
+  .product_size {
+    text-align: center;
+    margin-left: 45%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 1rem;
+    }
+    .flex {
+      display: block;
+      text-align: center;
+      margin-right: 18%;
+    }
+    .product_size {
+      text-align: center;
+      margin-left: 45%;
+    }
+  }

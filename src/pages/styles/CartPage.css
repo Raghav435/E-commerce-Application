@@ -1,0 +1,23 @@
+.iteamsdetails {
+  width: 80%;
+  border: 1px solid grey;
+  align-items: center;
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  gap: 15px;
+  text-align: center;
+}
+.productName {
+  width: fit-content;
+}
+.productBrand {
+  width: fit-content;
+}
+.productPrice {
+  width: fit-content;
+}

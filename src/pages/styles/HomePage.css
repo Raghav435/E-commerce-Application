@@ -1,0 +1,18 @@
+.hero-img1 {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 2rem; */
+}
+@media screen and (max-width: 1000px) {
+  /* .hero-img1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 300px;
+    margin-right: 5rem;
+  } */
+}

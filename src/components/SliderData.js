@@ -1,0 +1,26 @@
+export const SliderData = [
+  {
+    image:
+      "https://media.istockphoto.com/photos/shopping-online-concept-parcel-or-paper-cartons-with-a-shopping-cart-picture-id1249219777?b=1&k=20&m=1249219777&s=170667a&w=0&h=0dXNU-fjD9aOMmrvlppQhJ9gOqnW9dslKFdYLQN9rnk=",
+  },
+  {
+    image:
+      "https://media.istockphoto.com/photos/female-inventory-manager-shows-digital-tablet-information-to-a-worker-picture-id1071030302?b=1&k=20&m=1071030302&s=170667a&w=0&h=7UZV_QpwiTp-7j--WHGcsq0Zq-YpwrLmQdVQt0_FXcI=",
+  },
+  {
+    image:
+      "https://media.istockphoto.com/photos/tailor-taking-shoulder-measurements-picture-id1410112201?b=1&k=20&m=1410112201&s=170667a&w=0&h=smkd7Eenv9vHmjqxbBR8dvQZjUYYgnnV-eIgvaHPmEs=",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1446214814726-e6074845b4ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbiUyMG1lbnN8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1623120389902-6c846c80f4c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTgzfHxmYXNoaW9uJTIwbWVuc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1593032554190-0bf30dc936b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMzfHxmYXNoaW9uJTIwbWVuc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+  },
+];
