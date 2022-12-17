@@ -21,11 +21,9 @@ import {
   Button,
   Heading,
   SimpleGrid,
-  StackDivider,
-  useColorModeValue,
-  VisuallyHidden,
   List,
   ListItem,
+  Spinner,
 } from "@chakra-ui/react";
 import { MdLocalShipping } from "react-icons/md";
 
@@ -54,7 +52,7 @@ const EntityPages = () => {
 
   const fetchProductsDetail = async () => {
     const res = await axios
-      .get(`https://pr-rct-data.herokuapp.com/api/mens/${productId}`)
+      .get(`https://scrubs-foal.cyclic.app/mens/${productId}`)
       .catch((err) => {
         console.log(err);
       });
@@ -71,7 +69,13 @@ const EntityPages = () => {
   return (
     <Box>
       {Object.keys(product).length === 0 ? (
-        <div>...Loading</div>
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color="blue.500"
+          size="xl"
+        />
       ) : (
         <Container maxW={"5xl"}>
           <SimpleGrid

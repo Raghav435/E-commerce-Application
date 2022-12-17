@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Filter from "../components/Filter";
 import { getProductsApi } from "../store/Products/Products.action";
 import styles from "./styles/ListingPage.module.css";
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Spinner, Text } from "@chakra-ui/react";
 import ProductCard from "../components/ProductCard";
 
 const ListingPages = () => {
@@ -42,7 +42,13 @@ const ListingPages = () => {
   }
 
   if (loading) {
-    return "Loading...";
+    return <Spinner
+    thickness='4px'
+    speed='0.65s'
+    emptyColor='gray.200'
+    color='blue.500'
+    size='xl'
+  />
   }
 
   return (

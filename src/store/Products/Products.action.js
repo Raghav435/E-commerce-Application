@@ -20,12 +20,12 @@ export const getProductsApi = () => async (dispatch) => {
     type: PRODUCTS_GET_LOADING,
   });
   try {
-    const res = await axios.get("https://pr-rct-data.herokuapp.com/api/mens");
+    const res = await axios.get("https://scrubs-foal.cyclic.app/mens");
     dispatch({
       type: PRODUCTS_GET_SUCCESS,
       payload: res.data,
     });
-    return res.data;
+   
   } catch (e) {
     dispatch({
       type: PRODUCTS_GET_ERROR,
@@ -74,7 +74,7 @@ export const productsDeleted = () => {
 export const addProductsApi = (myData) => {
   return function (dispatch) {
     axios
-      .post("https://pr-rct-data.herokuapp.com/api/mens", myData)
+      .post("https://scrubs-foal.cyclic.app/mens", myData)
       .then((res) => {
         console.log(res.data);
         dispatch({
@@ -89,7 +89,7 @@ export const addProductsApi = (myData) => {
 export const deleteProductsApi = (id) => {
   return function (dispatch) {
     axios
-      .delete(`https://pr-rct-data.herokuapp.com/api/mens/${id}`)
+      .delete(`https://scrubs-foal.cyclic.app/mens/${id}`)
       .then((res) => {
         console.log(res.data);
         dispatch(productsDeleted());
@@ -102,7 +102,7 @@ export const deleteProductsApi = (id) => {
 export const editProductsApi = (id) => {
   return function (dispatch) {
     axios
-      .get(`https://pr-rct-data.herokuapp.com/api/mens/${id}`)
+      .get(`https://scrubs-foal.cyclic.app/mens/${id}`)
       .then((res) => {
         console.log(res.data);
         dispatch(productsEdited(res.data));
@@ -114,7 +114,7 @@ export const editProductsApi = (id) => {
 export const updateProductsApi = (products, id) => {
   return function (dispatch) {
     axios
-      .put(`https://pr-rct-data.herokuapp.com/api/mens/${id}`, products)
+      .put(`https://scrubs-foal.cyclic.app/mens/${id}`, products)
       .then((res) => {
         console.log(res.data);
         dispatch(productUpdated());
