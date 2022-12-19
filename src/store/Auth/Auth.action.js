@@ -58,16 +58,16 @@ export const SignupGet = (userData) => (dispatch) => {
   const requestAction = signupRequest();
   dispatch(requestAction);
   axios
-    .post("https://fraazo-clone.herokuapp.com/register", userData)
+    .post("https://ecommerce-backend-app.onrender.com/register", userData)
     .then((res) => {
       const successAction = signupSuccess(res.data);
-      console.log(res.data);
+      // console.log(res.data);
       if (res.data) {
         localStorage.setItem("User", JSON.stringify(res.data));
       }
       dispatch(successAction);
       console.log(res.data.token);
-      return res.data;
+      // return res.data;
     })
     .catch((error) => {
       const failureAction = signupFailure(error.message);
@@ -82,15 +82,15 @@ export const loginGet = (userData) => (dispatch) => {
   const requestAction = loginRequest();
   dispatch(requestAction);
   axios
-    .post("https://fraazo-clone.herokuapp.com/login", userData)
+    .post("https://ecommerce-backend-app.onrender.com/login", userData)
     .then((res) => {
       if (res.data) {
         localStorage.setItem("User", JSON.stringify(res.data));
       }
       const successAction = loginSuccess(res.data);
-      console.log(res.data);
+      // console.log(res.data);
       dispatch(successAction);
-      return res.data;
+      // return res.data;
     })
     .catch((err) => {
       const failureAction = loginFailure(err.message);

@@ -65,8 +65,8 @@ const ListingPages = () => {
         <div>...Loading Products</div>
       ) : (
         <div className={styles.grid}>
-          {currentpages.map((item) => (
-            <ProductCard key={item.id} {...item} />
+          {currentpages && currentpages?.map((item,index) => (
+            <ProductCard key={index} {...item} />
           ))}
 
           {/* {currentpages.map((products) => (

@@ -63,7 +63,7 @@ const Signup = () => {
         duration: 5000,
         isClosable: true,
       });
-      navigate("/login");
+      navigate("/");
     } catch (err) {
       toast({
         title: "Internal server error!",

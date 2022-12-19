@@ -72,7 +72,7 @@ function CheckOutStripe() {
       return;
     }
 
-    var response = fetch("https://fraazo-clone.herokuapp.com/payment/create", {
+    var response = fetch("https://ecommerce-backend-app.onrender.com/payment/create", {
       method: "POST",
       headers: {
         "content-type": "application/json",

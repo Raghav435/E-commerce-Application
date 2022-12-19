@@ -34,6 +34,7 @@ function PrivateRoute({ userData, children }) {
 
 const AllRoutes = () => {
   const userData = useSelector((state) => state.auth.user);
+  console.log(userData);
   const myData = JSON.parse(localStorage.getItem("User"));
   console.log(myData);
   const [open, setOpen] = useState(true);
@@ -69,7 +70,7 @@ const AllRoutes = () => {
           element={
             <Elements stripe={promise}>
               <PaymentPage />
-              {!userData && <Navigate to="/login"></Navigate>}
+              {!myData && <Navigate to="/login"></Navigate>}
             </Elements>
           }
         />
