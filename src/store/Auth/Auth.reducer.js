@@ -9,7 +9,7 @@ import {
   SIGNUP_SUCCESS,
 } from "./Auth.type";
 
-let user = JSON.parse(localStorage.getItem("User")) || {};
+let user = JSON.parse(localStorage.getItem("User")) || [];
 const initialState = {
   user: user,
   // ? { isLoggedIn: true, user }
@@ -32,7 +32,6 @@ export const authReducer = (state = initialState, { type, payload }) => {
       };
     }
     case LOGIN_SUCCESS: {
-      console.log("state",state);
       return {
         ...state,
         isLoading: false,

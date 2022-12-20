@@ -73,24 +73,25 @@ const Products = () => {
   const products = useSelector((state) => state.products.filteredItems);
   // console.log(products);
 
-  const isSuccess = useSelector((state) => state.auth.isSuccess);
+  const isSuccess = useSelector((state) => state.authReducer?.isSuccess);
   // console.log(isSuccess);
 
-  const user = useSelector((state) => state.auth.user);
+  // const user = useSelector((state) => state.authReducer?.user);
   // console.log(user);
 
-  const userData = useSelector((state) => state.auth.user);
   // console.log(userData);
+
+  const userDeta = JSON.parse(localStorage.getItem("User"));
 
   
 
-  if(!user){
+  if(!userDeta){
     return <Navigate to="/login"></Navigate>;
   }
 
-  if (userData.user.email !== "rs@gmail.com") {
-    return <Navigate to="/"></Navigate>;
-  }
+  // if (userData.user.email !== "rs@gmail.com") {
+  //   return <Navigate to="/"></Navigate>;
+  // }
 
   
 

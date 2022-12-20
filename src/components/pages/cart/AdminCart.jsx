@@ -24,18 +24,18 @@ const AdminCart = () => {
   // const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   // console.log(isLoggedIn);
 
-  const userData = useSelector((state) => state.auth.user);
+  const userData = useSelector((state) => state.authReducer.user);
   // console.log(userData);
 
-  const user = useSelector((state) => state.auth.user);
+  const userDeta = JSON.parse(localStorage.getItem("User"));
   // console.log(user);
 
-   if(!user){
-    return <Navigate to="/login"></Navigate>;
+  if (!userDeta) {
+    navigate("/login");
   }
 
-  if(userData.user.email !== "rs@gmail.com"){
-    return <Navigate to="/"></Navigate>
+  if (userDeta.user.email !== "rs@gmail.com") {
+    return <Navigate to="/"></Navigate>;
   }
 
   // if(!isLoggedIn){

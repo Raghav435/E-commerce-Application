@@ -21,7 +21,7 @@ const Login = (props) => {
   const toast = useToast();
   const navigate = useNavigate();
   const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
+    (state) => state.authReducer
   );
   const [formData, setFormData] = React.useState({
     email: "",
@@ -53,11 +53,11 @@ const Login = (props) => {
         duration: 5000,
         isClosable: true,
       });
-      // if (email == "rs@gmail.com") {
-      //   navigate("/dashboard/users");
-      // }else{
+      if (email == "rs@gmail.com" && password == "rs1@") {
+        navigate("/dashboard/users");
+      }else{
         navigate("/");
-      // }
+      }
     } catch (err) {
       toast({
         title: "Internal server error",

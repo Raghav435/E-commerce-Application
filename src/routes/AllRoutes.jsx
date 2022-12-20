@@ -33,7 +33,7 @@ function PrivateRoute({ userData, children }) {
 }
 
 const AllRoutes = () => {
-  const userData = useSelector((state) => state.auth.user);
+  const userData = useSelector((state) => state.authReducer.user);
   console.log(userData);
   const myData = JSON.parse(localStorage.getItem("User"));
   console.log(myData);

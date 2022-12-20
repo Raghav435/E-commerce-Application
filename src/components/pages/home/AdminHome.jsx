@@ -1,13 +1,19 @@
 import { Box, Heading, Img } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import "./AdminHome.css";
 
 const AdminHome = () => {
   const navigate = useNavigate();
-  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const isLoggedIn = useSelector((state) => state.authReducer?.isLoggedIn);
   console.log(isLoggedIn);
+
+  const userDeta = JSON.parse(localStorage.getItem("User"));
+
+  if (!userDeta) {
+    return <Navigate to="/login"></Navigate>;
+  }
 
   // useEffect(() => {
   //   if (!isLoggedIn) {
