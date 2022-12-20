@@ -107,12 +107,6 @@ const Products = () => {
     }
   };
 
-  // useEffect(() => {
-  //   if (!user) {
-  //     navigate("/login");
-  //   }
-  // });
-
   return (
     <Box>
       <Button onClick={onOpen}>Create new Products</Button>

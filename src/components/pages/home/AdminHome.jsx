@@ -18,11 +18,6 @@ const AdminHome = () => {
     return <Navigate to="/"></Navigate>;
   }
 
-  // useEffect(() => {
-  //   if (!isLoggedIn) {
-  //     navigate("/login");
-  //   }
-  // }, []);
   return (
     <Box className="home_Container">
       <Heading>Dashboard Home</Heading>

@@ -12,8 +12,6 @@ import {
 let user = JSON.parse(localStorage.getItem("User")) || [];
 const initialState = {
   user: user,
-  // ? { isLoggedIn: true, user }
-  // : { isLoggedIn: false, user: null },
   isError: false,
   isSuccess: false,
   isLoading: false,

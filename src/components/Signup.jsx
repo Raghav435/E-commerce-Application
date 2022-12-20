@@ -2,20 +2,14 @@ import React, { useRef } from "react";
 import {
   Box,
   Button,
-  ColorModeProvider,
   Flex,
   FormControl,
   FormLabel,
   Heading,
-  IconButton,
   Input,
   Text,
-  theme,
-  useColorMode,
   useToast,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { ThemeProvider } from "@emotion/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { SignupGet } from "../store/Auth/Auth.action";
@@ -73,12 +67,6 @@ const Signup = () => {
         isClosable: true,
       });
     }
-    // let payload = { name, email, password, username, mobile, descrption };
-    // console.log(payload);
-    // loadUsername("username");
-    // console.log(loadUsername);
-    // localStorage.setItem(username, JSON.stringify(username));
-    // handleSignup(payload);
   };
   return (
     <Flex minHeight="100vh" width="full" align="center" justifyContent="center">

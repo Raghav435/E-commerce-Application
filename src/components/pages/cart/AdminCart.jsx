@@ -21,9 +21,6 @@ const AdminCart = () => {
   const cart = useSelector((state) => state.cart.cart);
   console.log(cart);
 
-  // const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  // console.log(isLoggedIn);
-
   const userData = useSelector((state) => state.authReducer.user);
   // console.log(userData);
 
@@ -37,10 +34,6 @@ const AdminCart = () => {
   if (userDeta.user.email !== "rs@gmail.com") {
     return <Navigate to="/"></Navigate>;
   }
-
-  // if(!isLoggedIn){
-  //   navigate("/login")
-  // }
 
   return (
     <Box>

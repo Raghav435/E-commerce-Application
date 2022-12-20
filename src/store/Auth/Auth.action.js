@@ -66,7 +66,7 @@ export const SignupGet = (userData) => (dispatch) => {
         localStorage.setItem("User", JSON.stringify(res.data));
       }
       dispatch(successAction);
-      console.log(res.data.token);
+      // console.log(res.data.token);
       // return res.data;
     })
     .catch((error) => {
@@ -99,40 +99,6 @@ export const loginGet = (userData) => (dispatch) => {
       return err;
     });
 };
-
-// export const usersData = () => (dispatch) => {
-//   // const requestAction = loginRequest();
-//   // dispatch(requestAction);
-//   const user = JSON.parse(localStorage.getItem("UserName"));
-//   axios
-//     .get(`https://masai-api-mocker.herokuapp.com/user/${user}`, {
-//       headers: authHeader(),
-//     })
-//     .then((res) => {
-//       if (res.data) {
-//         localStorage.setItem("UserDeta", JSON.stringify(res.data));
-//       }
-//       const successAction = loginSuccess(res.data);
-//       console.log(res.data);
-//       dispatch(profileData);
-//       return res.data;
-//     })
-//     .catch((err) => {
-//       const failureAction = loginFailure(err.message);
-//       console.log(err);
-//       // dispatch(failureAction);
-//       return err;
-//     });
-// };
-
-// export default function authHeader() {
-//   const user = JSON.parse(localStorage.getItem("User"));
-//   if (user && user.token) {
-//     return { Authorization: "Bearer " + user.token };
-//   } else {
-//     return {};
-//   }
-// }
 
 export const logoutFun = () => (dispatch) => {
   dispatch(logout());

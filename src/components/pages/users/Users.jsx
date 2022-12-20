@@ -80,7 +80,6 @@ const Users = () => {
                 <Th>User Name</Th>
                 <Th>User Email</Th>
                 <Th>User Mobile</Th>
-                {/* <Th>Actions</Th> */}
               </Tr>
             </Thead>
             <Tbody>
@@ -91,9 +90,6 @@ const Users = () => {
                     <Td>{user.firstName}</Td>
                     <Td>{user.email}</Td>
                     <Td>{user.phone}</Td>
-                    {/* <Td>
-                      <Button onClick={handleLogout}>Logout</Button>
-                    </Td> */}
                   </Tr>
                 ))}
             </Tbody>
