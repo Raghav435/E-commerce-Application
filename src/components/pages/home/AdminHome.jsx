@@ -14,6 +14,9 @@ const AdminHome = () => {
   if (!userDeta) {
     return <Navigate to="/login"></Navigate>;
   }
+  if (userDeta.user.email !== "rs@gmail.com") {
+    return <Navigate to="/"></Navigate>;
+  }
 
   // useEffect(() => {
   //   if (!isLoggedIn) {

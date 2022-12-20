@@ -70,30 +70,19 @@ const Products = () => {
   const [error, setError] = React.useState("");
 
   const dispatch = useDispatch();
+
   const products = useSelector((state) => state.products.filteredItems);
   // console.log(products);
 
-  const isSuccess = useSelector((state) => state.authReducer?.isSuccess);
-  // console.log(isSuccess);
-
-  // const user = useSelector((state) => state.authReducer?.user);
-  // console.log(user);
-
-  // console.log(userData);
-
   const userDeta = JSON.parse(localStorage.getItem("User"));
 
-  
-
-  if(!userDeta){
+  if (!userDeta) {
     return <Navigate to="/login"></Navigate>;
   }
 
-  // if (userData.user.email !== "rs@gmail.com") {
-  //   return <Navigate to="/"></Navigate>;
-  // }
-
-  
+  if (userDeta.user.email !== "rs@gmail.com") {
+    return <Navigate to="/"></Navigate>;
+  }
 
   const handleAdd = (e) => {
     e.preventDefault();

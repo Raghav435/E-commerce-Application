@@ -25,7 +25,7 @@ const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
+    (state) => state.authReducer
   );
   const toast = useToast();
   const [formData, setFormData] = React.useState({
