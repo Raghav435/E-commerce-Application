@@ -48,7 +48,6 @@ const Signup = () => {
       password,
       phone,
     };
-    // setSuccessful(false);
     dispatch(SignupGet(userData));
     try {
       toast({

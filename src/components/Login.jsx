@@ -55,7 +55,7 @@ const Login = (props) => {
       });
       if (email == "rs@gmail.com" && password == "rs1@") {
         navigate("/dashboard/users");
-      }else{
+      } else {
         navigate("/");
       }
     } catch (err) {
