@@ -67,7 +67,6 @@ export const SignupGet = (userData) => (dispatch) => {
       }
       dispatch(successAction);
       // console.log(res.data.token);
-      // return res.data;
     })
     .catch((error) => {
       const failureAction = signupFailure(error.message);
@@ -90,7 +89,6 @@ export const loginGet = (userData) => (dispatch) => {
       const successAction = loginSuccess(res.data);
       // console.log(res.data);
       dispatch(successAction);
-      // return res.data;
     })
     .catch((err) => {
       const failureAction = loginFailure(err.message);
@@ -105,7 +103,6 @@ export const logoutFun = () => (dispatch) => {
   localStorage.removeItem("User");
   localStorage.removeItem("UserDeta");
   localStorage.removeItem("UserName");
-  // window.location.reload();
 };
 
 export { loginRequest, loginSuccess, loginFailure };
