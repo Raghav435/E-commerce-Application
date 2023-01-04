@@ -9,16 +9,12 @@ import {
 const Filter = (props) => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.data);
-  // console.log(products);
 
   const filteredProducts = useSelector((state) => state.products.filteredItems);
-  // console.log(filteredProducts);
 
   const size = useSelector((state) => state.products.size);
-  // console.log(size);
 
   const sort = useSelector((state) => state.products.sort);
-  // console.log(sort);
 
   const handleSort = (e) => {
     dispatch(sortProductsApi(filteredProducts, e.target.value));
