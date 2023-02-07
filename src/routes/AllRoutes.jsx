@@ -1,6 +1,6 @@
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -24,20 +24,20 @@ const promise = loadStripe(
   "pk_test_51L97nDSJamWgxW3FAkAQ3D2v127yEvkP8WF8YxSyrp3mGNwOxsSoeIvQNbAAgJatwVDDVLKGxpPMWpBvypXeWVN000GizGQda3"
 );
 
-function PrivateRoute({ userData, children }) {
-  if (userData) {
-    return children;
-  } else {
-    return <Navigate to="/login"></Navigate>;
-  }
-}
+// function PrivateRoute({ userData, children }) {
+//   if (userData) {
+//     return children;
+//   } else {
+//     return <Navigate to="/login"></Navigate>;
+//   }
+// }
 
 const AllRoutes = () => {
   const userData = useSelector((state) => state.authReducer.user);
   console.log(userData);
   const myData = JSON.parse(localStorage.getItem("User"));
   console.log(myData);
-  const [open, setOpen] = useState(true);
+  // const [open, setOpen] = useState(true);
 
   return (
     <>

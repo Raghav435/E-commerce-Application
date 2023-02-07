@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Stack} from "@chakra-ui/react";
 import React from "react";
 import { useSelector } from "react-redux";
 import CheckOutStripe from "../components/CheckoutStripe";
